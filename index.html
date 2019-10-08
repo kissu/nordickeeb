@@ -1,49 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<script src="js/reveal.js"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.type = 'text/css'
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css'
+    document.getElementsByTagName('head')[0].appendChild(link)
+  </script>
+</head>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Improve your daily typing experience</h2>
+      </section>
+      <section>Vertical Slide 1</section>
+      <section data-background-size="contain" data-background-image="images/old_guy.gif" class="block-section">
+        <div class="flex">
+          <p class="align-bottom">
+            wow, super tasty stuff...<br>
+            💯 🍉 😓 🆗 ✔️ ❎
+          </p>
+        </div>
+
+      </section>
+      <section>
+        <div class="flex">
+          <img class="flex-50" src="images/wall.jpg" alt="">
+          <img class="flex-50" src="images/wall.jpg" alt="">
+          <img class="flex-50" src="images/wall.jpg" alt="">
+          <!-- <img class="flex-50" src="images/old_guy.gif" alt=""> -->
+          <img class="flex-50" src="images/cat_typing.gif" alt="">
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controls: false,
+      progress: true,
+      center: true,
+      hash: true,
+      fragments: true,
+      fragmentInURL: true,
+      slideNumber: true,
+      parallaxBackgroundImage: 'images/wall.jpg',
+      parallaxBackgroundSize: '2453px 1637px',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+      hideCursorTime: 500,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      width: "90%",
+      height: "100%",
+      // Factor of the display size that should remain empty around the content
+      margin: 0,
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true },
+      ],
+    })
+  </script>
+</body>
+
 </html>
+
+<style>
+  .block-section {
+    height: 100%;
+  }
+
+  .align-bottom {
+    align-self: flex-end;
+    border: 5px solid yellow;
+  }
+
+  .align-top {
+    align-self: flex-start;
+    border: 5px solid greenyellow;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 5px solid red;
+    height: 100%;
+    /* width: 100%; */
+  }
+
+  .flex-50 {
+    flex: 1;
+    height: 100%;
+    width: 500px;
+  }
+</style>
