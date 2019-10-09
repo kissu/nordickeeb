@@ -149,7 +149,7 @@
         </div>
       </section>
 
-      <section class="block-section" data-background-video="videos/rama_video.mp4" data-background-video-muted>
+      <section class="block-section" data-background-video="videos/rama_video.mp4">
         <!-- data-background-video-loop -->
         <!-- data-background-video-muted -->
         <div class="flex">
@@ -170,6 +170,9 @@
   <script src="js/reveal.js"></script>
 
   <script>
+    if (window.location.hostname == 'nordickeeb.kissu.io') {
+      document.querySelector('.left-corner').classList.add('hide-presentation-label')
+    }
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
@@ -263,7 +266,7 @@
   }
 
   .flex-33 {
-    flex: 0 1 510px;
+    flex: 0 1 530px;
     /* height: 0%; */
     width: 500px;
   }
@@ -311,5 +314,9 @@
     font-size: 0.7em;
     padding: 0 0.7em;
     border-radius: 0 0 0 20px;
+  }
+
+  .hide-presentation-label {
+    display: none;
   }
 </style>
