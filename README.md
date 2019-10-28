@@ -2,4 +2,4 @@
 
 This is lightning talk, nothing related to reveal.js documentation 🐱
 
-Hi, I want my hacktoberfest t-shirt... :3
+Hi, I really wish this will work. 🙏🏻
